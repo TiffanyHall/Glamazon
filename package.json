@@ -1,0 +1,28 @@
+{
+  "name": "Glamazon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TiffanyHall/Glamazon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TiffanyHall/Glamazon/issues"
+  },
+  "homepage": "https://github.com/TiffanyHall/Glamazon#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "fs": "0.0.1-security",
+    "mysql2": "^1.6.4",
+    "path": "^0.12.7",
+    "sequelize": "^4.41.1"
+  }
+}

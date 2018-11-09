@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Glamazon</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body id="body">
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="text-center"> Glamazon</h1>
+            <hr>
+            <h2 class="text-center">Glamazon offers customers the latest cosmetics, makeup, fragrance and skincare &
+                haircare tools. Shop for beauty products from top designers and explore the latest trends. </h2>
+            <br>
+
+            <div class="text-center">
+                <a href="#productlist"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span>Let's Go Shopping!</button></a>
+            </div>
+        </div>
+
+        <table class="table table-bordered" span="8" id="productlist">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">PRODUCT</th>
+                    <th scope="col">DEPARTMENT</th>
+                    <th scope="col">QTY</th>
+                    <th scope="col">AMT</th>
+                    <th scope="col">PRICE</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+               
+            </tbody>
+        </table>
+
+        <button type="button" id="order" class="btn btn-primary" data-toggle="modal" data-target="#modalTwo">
+                Place Order
+            </button>
+
+        <button type="button" id="view" class="btn btn-primary" data-toggle="modal" data-target="#modalOne">
+            View Cart
+        </button>
+       
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright &#169; Glamazon 2018</p>
+        </div>
+    </footer>
+
+    </div>
+
+    <div class="modal fade" id="modalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Items In Cart</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <ol id="cart-items"></ol>
+                <p id="cart-total"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="modal fade" id="modalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalCenterTitle">Order Placed!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Your purchase was successful. Thank you for shopping on Glamazon!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <script src="/js/app.js" type="text/javascript"></script>
+</body>
+
+</html>
