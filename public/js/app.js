@@ -46,26 +46,40 @@ $(document).ready(function () {
 
         subTotal += parseInt(addToList.amount) * parseInt(addToList.price.replace('$', ''));
 
-        $('#cart-items').append(`<li>${addToList.name} x${addToList.amount} <button type="button" class="btn btn-primary  removeOrder ${addToList.id}">Remove From Order</button></li>`);
+        $('#cart-items').append(`<li>${addToList.name} x${addToList.amount} <button type="button" id="removeButton" class="btn btn-primary removeOrder ${addToList.id} ">Remove From Order</button></li>`);
         $('#cart-total').html('$' + subTotal + '.00');
+
+        console.warn()
+
+
     });
 
 
-    $("#productlist").on("click", ".btn.removeOrder", function (e) {
+    $(".modal-content").on("click", ".btn.removeOrder", function (e) {
 
         e.preventDefault();
 
-        const itemParent = $(this).parent();
+        const itemParent = $(this).parent(); 
+        console.log("this:", $(this));
+        console.log("itemParent:", itemParent);
+
         const itemPrice = parseInt($(this).attr('class').substring(
             $(this).attr('class').lastIndexOf("z") + 1,
             $(this).attr('class').lastIndexOf(" ")
         ));
 
+        console.log("itemPrice:", itemPrice);
+
         const itemQty = parseInt(itemParent.html().substring(itemParent.html().lastIndexOf("x") + 1,
             itemParent.html().lastIndexOf(" ")));
 
         const itemTotal = itemQty * itemPrice;
+
+        console.warn("itemTotal:", itemTotal);
+
         subTotal -= itemTotal;
+
+        console.warn("subTotal:", subTotal);
 
         itemParent.remove();
 
